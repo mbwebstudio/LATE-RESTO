@@ -205,3 +205,15 @@ footer .fine-foot{display:block;margin-top:32px;padding-top:18px;border-top:1px 
 .exp-photos{display:grid;gap:12px}
 .exp-photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
 @media(max-width:860px){.exp-grid{grid-template-columns:1fr}.exp-photos{grid-template-columns:1fr 1fr}}
+
+/* Full carta: index, part headings, sub-headings and "Nuevo" tags */
+.carta-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:56px;padding:24px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+.carta-nav b{display:block;font-family:var(--display);font-weight:400;font-size:1.4rem;letter-spacing:.04em;margin-bottom:8px}
+.carta-nav a{display:inline-block;margin:0 14px 6px 0;color:var(--muted);text-decoration:none;font-size:.95rem}
+.carta-nav a:hover{color:var(--accent);text-decoration:underline}
+@media(max-width:760px){.carta-nav{grid-template-columns:1fr;gap:16px}}
+.carta-part{font-size:clamp(2.2rem,5vw,3.2rem);margin:56px 0 12px;color:var(--accent);max-width:none}
+.carta-nav + .carta-part{margin-top:0}
+.menu details{scroll-margin-top:90px}
+.menu .sub{font-family:var(--display);font-weight:400;font-size:1.3rem;letter-spacing:.06em;color:var(--accent);margin:8px 0 2px}
+.tag{display:inline-block;vertical-align:middle;margin-left:6px;padding:1px 7px;border-radius:999px;background:var(--accent);color:#fff;font:700 .68rem/1.6 var(--body);letter-spacing:.04em;text-transform:uppercase}
