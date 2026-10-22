@@ -194,3 +194,14 @@ footer a{color:#fff}
 footer .fine-foot{display:block;margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:.85rem;color:#a8a39b}
 @media(max-width:760px){footer .wrap{grid-template-columns:1fr}}
 .rest{background:var(--surface)}
+
+/* Photos added: dish gallery, about photo, experience photos */
+.cocina{background:var(--surface)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+@media(max-width:860px){.gallery{grid-template-columns:1fr 1fr}}
+.about-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);margin-top:28px}
+.exp-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+.exp-photos{display:grid;gap:12px}
+.exp-photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+@media(max-width:860px){.exp-grid{grid-template-columns:1fr}.exp-photos{grid-template-columns:1fr 1fr}}
