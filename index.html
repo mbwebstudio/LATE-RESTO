@@ -77,6 +77,15 @@ header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 8
 .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:28px}
 .quote{padding-top:22px;border-top:4px solid var(--accent)}
 .quote blockquote{font-size:1.12rem;margin-bottom:14px}
+.visual.photo{margin:0}.visual.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r);display:block}
+.visual.photo figcaption,.gallery figcaption{font-size:.78rem;color:var(--muted);margin-top:6px}
+.visual.photo a,.gallery figcaption a{color:inherit}
+.gallery .grid{columns:4 220px;column-gap:16px}
+.gallery figure{margin:0 0 18px;break-inside:avoid}
+.gallery figure img{width:100%;height:auto;display:block;border-radius:var(--r)}
+.gallery .cap{font-weight:600;font-size:.95rem;color:var(--ink)}
+.place-img{margin-top:22px}.place-img img{width:100%;height:auto;display:block;border-radius:var(--r);border:1px solid var(--line)}
+.place-img figcaption{font-size:.85rem;color:var(--muted);margin-top:6px}
 .menu{background:var(--surface)}
 .menu details{border-top:2px solid var(--ink)}
 .menu details:last-of-type{border-bottom:2px solid var(--ink)}
@@ -115,14 +124,14 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:50;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
 .float svg{width:28px;height:28px}
-.hero h1{letter-spacing:.04em;line-height:.95}.logo{letter-spacing:.3em;font-size:1.6rem}.logo .mark{display:none}.services h3,.facts b{letter-spacing:.04em}
+.hero h1{letter-spacing:.04em;line-height:.95}.logo{letter-spacing:.3em;font-size:1.6rem}.logo .mark{display:none}.visual.photo img{aspect-ratio:4/3}.services h3,.facts b{letter-spacing:.04em}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <a class="logo" href="#"><svg class="mark" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="var(--accent)"/><path d="M9 13h13l-1.4 9c-.3 1.6-1.6 2.6-3.2 2.6h-2.8c-1.6 0-2.9-1-3.2-2.6zM22 15h1.5a3 3 0 0 1 0 6H21" fill="none" stroke="var(--accent-ink)" stroke-width="2"/></svg><span>Late</span></a>
-    <nav aria-label="Principal"><ul><li><a href="#servicios">Servicios</a></li><li><a href="#carta">Carta</a></li><li><a href="#lugar">El lugar</a></li><li><a href="#opiniones">Opiniones</a></li><li><a href="#contacto">Contacto</a></li></ul></nav>
+    <nav aria-label="Principal"><ul><li><a href="#servicios">La experiencia</a></li><li><a href="#carta">Carta</a></li><li><a href="#lugar">El lugar</a></li><li><a href="#opiniones">Opiniones</a></li><li><a href="#contacto">Contacto</a></li></ul></nav>
     <a class="btn btn-main" href="https://wa.me/59895655081?text=Hola%20Late%2C%20quisiera%20reservar%20una%20mesa." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span>Reservar</span></a>
   </div>
 </header>
@@ -134,7 +143,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         <a class="btn btn-main" href="https://wa.me/59895655081?text=Hola%20Late%2C%20quisiera%20reservar%20una%20mesa." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Reservar por WhatsApp</a>
         <a class="btn btn-ghost" href="#contacto"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Cómo llegar</a>
       </div>
-      <p class="rating"><span class="stars" aria-hidden="true">★★★★☆</span> <span><b>4,3</b> en Google (608 reseñas)</span></p></div><div class="visual" aria-hidden="true"><svg viewBox="0 0 220 200"><path d="M110 18c52-4 92 30 94 80 2 54-40 88-94 86-56-2-96-34-94-88 2-50 42-74 94-78z" fill="var(--soft)"/><path d="M110 18c52-4 92 30 94 80 2 54-40 88-94 86-56-2-96-34-94-88 2-50 42-74 94-78z" fill="none" stroke="var(--ink)" stroke-width="2"/><path d="M114 24c48-2 84 30 86 74" fill="none" stroke="var(--ink)" stroke-width="1.5"/><circle cx="78" cy="112" r="24" fill="var(--ink)"/><circle cx="78" cy="112" r="17" fill="var(--surface)"/><circle cx="78" cy="112" r="8" fill="var(--accent)"/><circle cx="82" cy="109" r="3" fill="#7FA35B"/><circle cx="118" cy="118" r="24" fill="var(--ink)"/><circle cx="118" cy="118" r="17" fill="var(--surface)"/><circle cx="118" cy="118" r="8" fill="var(--accent)"/><circle cx="122" cy="115" r="3" fill="#7FA35B"/><circle cx="98" cy="80" r="24" fill="var(--ink)"/><circle cx="98" cy="80" r="17" fill="var(--surface)"/><circle cx="98" cy="80" r="8" fill="var(--accent)"/><circle cx="102" cy="77" r="3" fill="#7FA35B"/><path d="M150 40l40 110M162 36l38 112" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/></svg></div></div></section>
+      <p class="rating"><span class="stars" aria-hidden="true">★★★★☆</span> <span><b>4,3</b> en Google (609 reseñas)</span></p></div><figure class="visual photo"><img src="fotos/01.jpg" alt="Roll de salmón y palta empanizado, con salsa para mojar, sobre tabla de madera"></figure></div></section>
 
 <section id="servicios">
   <div class="wrap">
@@ -148,6 +157,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     </ul>
   </div>
 </section>
+
 
 
 <section id="carta" class="menu">
@@ -167,13 +177,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <div class="wrap">
     <div>
       <h2>En La Mansa, Parada 7</h2>
-      <p>Remodelamos el local para que la experiencia sea completa: ambientación cálida, buena música y somos pet friendly.</p>
+      <p>Un salón cálido de ladrillo y madera, con barra, buena música y lugar para tu mascota: somos pet friendly.</p>
       <p>Aunque el pescado fresco es el protagonista, en la carta hay opciones con carne, vegetarianas, sin gluten y menú kids.</p>
     </div>
     <ul class="facts">
       <li><b>Mar a dom</b><span>cenas de 19 a 24 h</span></li>
       <li><b>Sáb y dom</b><span>también almuerzos, de 12 a 16 h</span></li>
       <li><b>Pet friendly</b><span>tu mascota es bienvenida</span></li>
+      <li class="place-img" style="display:block;padding:0;border:0;background:none"><figure style="margin:0"><img src="fotos/02.jpg" alt="Salón de Late con paredes de ladrillo, estufa a leña, mesas de madera y el cartel LATE sobre la barra" loading="lazy"><figcaption>Nuestro salón en La Mansa</figcaption></figure></li>
     </ul>
   </div>
 </section>
@@ -181,7 +192,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 <section id="opiniones">
   <div class="wrap">
     <h2>Lo que dicen en Google</h2>
-    <p class="section-lead">4,3 de puntaje en Google, con 608 reseñas. Algunas de las más recientes:</p>
+    <p class="section-lead">4,3 de puntaje en Google, con 609 reseñas.</p>
     <div class="quotes">
         <figure class="quote"><blockquote>“La comida es de la mejor calidad en la punta y trabajan el concepto de cocina fusión muy bien. Hay opciones de carne y vegetarianas. Han remodelado todo el local dejándolo aún más bello, y son súper petfriendly.”</blockquote><figcaption>Inés B. <span class="stars" aria-label="5 estrellas">★★★★★</span></figcaption></figure>
         <figure class="quote"><blockquote>“De los mejores sushis que he comido por el este. Destaco mucho que el relleno del sushi tenía abundante salmón, estaba riquísimo. Pedimos también ceviche de pesca blanca y estaba muy bueno también.”</blockquote><figcaption>Fernanda S. <span class="stars" aria-label="5 estrellas">★★★★★</span></figcaption></figure>
@@ -198,7 +209,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="row"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div>Av. Los Alpes, Parada 7 de La Mansa, Punta del Este<br><a href="https://www.google.com/maps/place/Late+Resto/data=!4m2!3m1!1s0x9575053814dafaeb:0x2546c3043fd8cd41" target="_blank" rel="noopener">Abrir en Google Maps</a></div></div>
       <div class="row"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><a href="tel:+59895655081">095 655 081</a> o <a href="https://wa.me/59895655081?text=Hola%20Late%2C%20quisiera%20reservar%20una%20mesa." target="_blank" rel="noopener">WhatsApp</a></div></div>
       <div class="row"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><a href="tel:+59842481817">4248 1817</a></div></div>
-      <div class="row"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><div><a href="https://www.instagram.com/lateresto.pde/" target="_blank" rel="noopener">Instagram</a></div></div>
+      
+      <div class="row"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><div><a href="https://www.instagram.com/lateresto.pde/" target="_blank" rel="noopener">Instagram @lateresto.pde</a></div></div>
       <table class="hours"><caption>Horarios</caption><tr><th scope="row">Lunes</th><td>Cerrado</td></tr><tr><th scope="row">Martes</th><td>19:00 a 24:00</td></tr><tr><th scope="row">Miércoles</th><td>19:00 a 24:00</td></tr><tr><th scope="row">Jueves</th><td>19:00 a 24:00</td></tr><tr><th scope="row">Viernes</th><td>19:00 a 24:00</td></tr><tr><th scope="row">Sábado</th><td>12:00 a 16:00 y 19:00 a 24:00</td></tr><tr><th scope="row">Domingo</th><td>12:00 a 16:00 y 19:00 a 24:00</td></tr></table>
     </div>
     <div class="map"><iframe loading="lazy" title="Mapa de Late" src="https://www.google.com/maps?q=-34.9413889%2C-54.9381304&output=embed"></iframe></div>
@@ -218,6 +230,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <div class="wrap">
     <span>© 2026 Late, Punta del Este</span>
     <span>Av. Los Alpes, Parada 7 de La Mansa, Punta del Este</span>
+    <a href="https://www.instagram.com/lateresto.pde/" target="_blank" rel="noopener" style="display:inline-flex;gap:8px;align-items:center"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@lateresto.pde</a>
   </div>
 </footer>
 <a class="float" href="https://wa.me/59895655081?text=Hola%20Late%2C%20quisiera%20reservar%20una%20mesa." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
